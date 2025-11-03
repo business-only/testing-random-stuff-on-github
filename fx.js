@@ -33,7 +33,7 @@ function initResultsLink() {
             // Replace with actual results retrieval logic
             setTimeout(() => {
                 // Using location.href instead of window.open for better security
-                window.location.href = 'https://www.google.com';
+                window.location.href = 'https://www.servlab.tn/';
             }, 1500);
         }
     });
