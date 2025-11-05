@@ -1,44 +1,5 @@
 // Simplified French-only website functionality
 
-
-
-// Toast notification function
-function showToast(message, type = 'info') {
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-    toast.textContent = message;
-    toast.setAttribute('role', 'alert');
-    toast.setAttribute('aria-live', 'polite');
-    
-    document.body.appendChild(toast);
-    
-    setTimeout(() => toast.classList.add('show'), 100);
-    
-    setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-// Form handling
-function initResultsLink() {
-    document.body.addEventListener('click', function(e) {
-        // Handle results button clicks
-        const target = e.target.closest('.results-btn-merged');
-        
-        if (target) {
-            e.preventDefault();
-            showToast('Redirection vers vos résultats...', 'success');
-            
-            // Replace with actual results retrieval logic
-            setTimeout(() => {
-                // Using location.href instead of window.open for better security
-                window.location.href = 'https://www.servlab.tn/';
-            }, 1500);
-        }
-    });
-}
-
 // Smooth scroll functionality
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -104,9 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set current year in footer
     setCurrentYear();
-    
-    // Initialize results link
-    initResultsLink();
     
     // Initialize smooth scroll
     initSmoothScroll();
