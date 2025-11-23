@@ -23,19 +23,6 @@ function initSmoothScroll() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
-                // Close mobile menu if open
-                const mobileNav = document.getElementById('mobileNav');
-                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                if (mobileNav && mobileNav.classList.contains('active')) {
-                    mobileNav.classList.remove('active');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                    // Safer DOM manipulation instead of innerHTML
-                    mobileMenuBtn.textContent = '';
-                    const icon = document.createElement('i');
-                    icon.className = 'fas fa-bars';
-                    mobileMenuBtn.appendChild(icon);
-                }
             }
         });
     });
