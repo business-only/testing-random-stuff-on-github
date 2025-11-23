@@ -82,19 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Add loading state to map
-    const mapElement = document.getElementById('map');
-    if (mapElement) {
-        mapElement.classList.add('loading');
-        
-        // Remove loading state once map is initialized
-        setTimeout(() => {
-            mapElement.classList.remove('loading');
-        }, 1000);
-    }
-    
-    // Initialize map
-    if (typeof initMap === 'function') {
-        initMap();
-    }
+
 });
